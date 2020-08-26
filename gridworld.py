@@ -4,6 +4,7 @@ class Grid: #Environment
 		self.cols = cols
 		self.i = start[0]
 		self.j = start[1]
+	#Set class's prameters to given rewards and actions
 	def set(self, rewards, actions):
 		#reward = dict of (i, j) : A (row, col): reward
 		#actions = dict of (i, j) : A (row, col): action list
