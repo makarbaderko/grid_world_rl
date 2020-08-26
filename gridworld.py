@@ -17,3 +17,7 @@ class Grid: #Environment
 	#What's happening in the gridworld
 	def current_state(self):
 		return (self.i, self.j)
+	#End or not
+	def is_terminal(self, s):
+		return s not in self.actions
+	
