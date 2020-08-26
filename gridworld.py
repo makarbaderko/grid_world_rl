@@ -20,4 +20,22 @@ class Grid: #Environment
 	#End or not
 	def is_terminal(self, s):
 		return s not in self.actions
-	
+	#Get the new state
+	def get_next_state(self, s, a):
+		i, j = s[0], s[1]
+		if a in self.actions[(i, j)]:
+			#If action is
+			#Up
+			if a == 'U':
+				i -= 1
+			#Down
+			elif a == 'D':
+				i += 1
+			#Right
+			elif a == 'R':
+				j+=1
+			#Left
+			elif a == 'L':
+				j -= 1
+		#The new state
+		return i, j
