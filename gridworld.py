@@ -39,3 +39,19 @@ class Grid: #Environment
 				j -= 1
 		#The new state
 		return i, j
+	def move(self, action):
+		#check if allowed
+		if action in self.actions[(self.i, self.j)]:
+			if action == 'U':
+				self.i -= 1
+			#Down
+			elif action == 'D':
+				self.i += 1
+			#Right
+			elif action == 'R':
+				self. j += 1
+			#Left
+			elif action == 'L':
+				self.j -= 1
+		return self.rewards.get((self.i, self.j), 0)
+	
