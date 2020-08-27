@@ -88,3 +88,4 @@ class Grid: #Environment
 		}
 		g.set(rewards, actions)
 		return g
+	#Env finished
